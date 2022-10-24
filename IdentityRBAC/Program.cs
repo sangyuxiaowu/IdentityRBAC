@@ -42,7 +42,7 @@ builder.Services.AddSwaggerGen(options => {
 
 // Identity框架
 builder.Services.AddDbContext<IdentityDb>(opt => {
-    var connectionString = @"Server=localhost;database=rbactest;uid=root;pwd=1q2wazsx;";
+    var connectionString = @"Server=192.168.2.252;database=rbactest;uid=root;pwd=1q2wazsx;";
     var serverVersion = new MySqlServerVersion(new Version(8, 0, 27));
     opt.UseMySql(connectionString, serverVersion);
 });
@@ -117,7 +117,7 @@ app.UseAuthentication();
 // UseAuthentication 之后 UseAuthorization 之前
 app.UseRolePermission(opt => {
     // 设置系统内置超级管理员的rolename
-    opt.userAdministratorRoleName = "supadmin";
+    opt.UserAdministratorRoleName = "supadmin";
 });
 app.UseAuthorization();
 

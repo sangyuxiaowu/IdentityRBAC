@@ -32,15 +32,15 @@ namespace IdentityRBAC.Controllers
         }
 
         /// <summary>
-        /// 新建-数值
+        /// 增加-数值
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        [Resource("新建-数值")]
+        [Resource("增加-数值")]
         [HttpPost]
         public IActionResult Post([FromBody] string value)
         {
-            return Ok("新建-数值");
+            return Ok("增加-数值");
         }
 
         /// <summary>
